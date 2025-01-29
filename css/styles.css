@@ -18,8 +18,9 @@
 
 /* Footer styles */
 footer {
-    background-color: #343a40; /* Dark gray background */
-    color: #f8f9fa; /* Light gray text color */
+    background-color: #f8f9fa; /* Light gray background */
+    color: #343a40; /* Dark gray text color */
+    border-top: 1px solid #dee2e6; /* Subtle border */
 }
 
 /* Example of other neutral tones you might use */
