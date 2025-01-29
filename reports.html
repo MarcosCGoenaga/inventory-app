@@ -3,22 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventory Tracker - Reports</title>
+    <title>Inventory Tracker - Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="products.html">Product List</a>
-            <a href="product-form.html">Add Product</a>
-            <a href="about.html">About</a>
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Welcome to Inventory Tracker</h1>
+        <nav class="nav justify-content-center">
+            <a class="nav-link text-white" href="ppl.html">PPL</a>
+            <a class="nav-link text-white" href="product-form.html">Add Product</a>
+            <a class="nav-link text-white" href="reports.html">Reports</a>
+            <a class="nav-link text-white" href="about.html">About</a>
         </nav>
     </header>
-    <main>
-        <h2>Reports</h2>
-        <p>This page will contain various inventory reports.</p>
+    <main class="container my-5">
+        <section class="intro text-center">
+            <h2>Manage Your Inventory Efficiently</h2>
+            <p>Inventory Tracker helps you keep track of your products, manage stock levels, and generate detailed reports. Whether you're a small business owner or managing a large warehouse, our tool provides the features you need to stay organized and efficient.</p>
+            <button class="btn btn-success" onclick="location.href='ppl.html'">Get Started</button>
+        </section>
+        <section class="features mt-5">
+            <h2 class="text-center">Features</h2>
+            <div class="card mb-3 p-3">
+                <h3 class="card-title">PPL</h3>
+                <p class="card-text">View all your inventory items in one place. Easily search and filter through your products to find exactly what you need.</p>
+            </div>
+            <div class="card mb-3 p-3">
+                <h3 class="card-title">Add/Edit Products</h3>
+                <p class="card-text">Easily add new products or edit existing ones. Keep your inventory up-to-date with accurate product information.</p>
+                <a href="product-form.html" class="btn btn-primary">Add Product</a>
+            </div>
+            <div class="card mb-3 p-3">
+                <h3 class="card-title">Generate Reports</h3>
+                <p class="card-text">Create detailed reports to analyze your inventory data. Monitor stock levels, track sales trends, and make informed decisions.</p>
+            </div>
+        </section>
     </main>
+    <footer class="bg-primary text-white text-center py-3">
+        <p>&copy; 2025 Marcos Costa. All rights reserved.</p>
+    </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
