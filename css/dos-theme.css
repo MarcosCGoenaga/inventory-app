@@ -1,0 +1,113 @@
+/* DOS Theme Colors */
+:root {
+    --primary-color: #00FF00; /* Green text color */
+    --secondary-color: #00FF00; /* Green text color */
+    --background-color: #000000; /* Black background */
+    --text-color: #00FF00; /* Green text color */
+    --card-bg-color: #000000; /* Black card background */
+    --navbar-bg-color: #000000; /* Black navbar background */
+    --footer-bg-color: #000000; /* Black footer background */
+    --link-color: #00FF00; /* Green link color */
+    --link-hover-color: #00FF00; /* Green link hover color */
+}
+
+/* Apply DOS Theme Colors */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: var(--navbar-bg-color);
+    padding: 1rem;
+}
+
+.navbar .nav-link {
+    color: var(--link-color) !important;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.navbar .nav-link:hover {
+    color: var(--link-hover-color) !important;
+    text-decoration: underline;
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    margin-bottom: 1rem;
+    border: 1px solid var(--text-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.1);
+    padding: 1rem;
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--text-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+footer a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--background-color);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn-primary:hover {
+    background-color: var(--link-hover-color);
+    border-color: var(--link-hover-color);
+    color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.intro {
+    background-color: var(--card-bg-color);
+    padding: 2rem;
+    border: 1px solid var(--text-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.1);
+}
+
+.features {
+    margin-top: 2rem;
+}
+
+.features .card {
+    padding: 1rem;
+}
+
+.features .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.features .card-text {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
