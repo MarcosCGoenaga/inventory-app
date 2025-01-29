@@ -3,34 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventory Tracker - Product List</title>
+    <title>PPL - Product List</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="product-form.html">Add Product</a>
-            <a href="reports.html">Reports</a>
-            <a href="about.html">About</a>
+    <header class="bg-primary text-white text-center py-3">
+        <h1>PPL - Product List</h1>
+        <nav class="nav justify-content-center">
+            <a class="nav-link text-white" href="index.html">Home</a>
+            <a class="nav-link text-white" href="product-form.html">Add Product</a>
+            <a class="nav-link text-white" href="reports.html">Reports</a>
+            <a class="nav-link text-white" href="about.html">About</a>
         </nav>
     </header>
-    <main>
-        <h2>Product List</h2>
-        <table>
+    <main class="container my-5">
+        <h2 class="text-center">Product List</h2>
+        <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Product Name</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th>Actions</th>
+                    <th scope="col">Product ID</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Actions</th>
                 </tr>
             </thead>
-            <tbody id="productList">
-                <!-- Products will be listed here -->
+            <tbody>
+                <!-- Example product rows -->
+                <tr>
+                    <td>1</td>
+                    <td>Product A</td>
+                    <td>Category 1</td>
+                    <td>$10.00</td>
+                    <td>100</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning">Edit</button>
+                        <button class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Product B</td>
+                    <td>Category 2</td>
+                    <td>$20.00</td>
+                    <td>50</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning">Edit</button>
+                        <button class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <!-- Repeat for other products -->
             </tbody>
         </table>
     </main>
-    <script src="js/script.js"></script>
+    <footer class="bg-primary text-white text-center py-3">
+        <p>&copy; 2025 Marcos Costa. All rights reserved.</p>
+    </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
