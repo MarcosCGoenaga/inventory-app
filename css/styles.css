@@ -1,34 +1,59 @@
-/* Custom Styles */
+/* theme.css */
+
+/* Custom colors */
+:root {
+    --primary-color: #007bff; /* Bootstrap primary color */
+    --secondary-color: #6c757d; /* Bootstrap secondary color */
+    --background-color: #f8f9fa; /* Light grey background */
+    --text-color: #212529; /* Dark text color */
+    --card-bg-color: #ffffff; /* White card background */
+    --navbar-bg-color: #343a40; /* Dark grey navbar background */
+    --footer-bg-color: #343a40; /* Dark grey footer background */
+    --link-color: #007bff; /* Blue link color */
+    --link-hover-color: #0056b3; /* Darker blue link hover color */
+}
+
+/* Apply custom colors */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-header {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.navbar {
+    background-color: var(--navbar-bg-color);
 }
 
-nav a {
-    font-size: 1.2rem;
+.navbar .nav-link {
+    color: var(--link-color) !important;
 }
 
-.intro h2 {
-    color: #28a745;
-    font-size: 2rem;
+.navbar .nav-link:hover {
+    color: var(--link-hover-color) !important;
 }
 
-.intro p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.features .feature {
-    background-color: #f8f9fa;
+.card {
+    background-color: var(--card-bg-color);
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    background-color: var(--footer-bg-color);
+    color: var(--text-color);
+}
+
+footer a {
+    color: var(--link-color);
+}
+
+footer a:hover {
+    color: var(--link-hover-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--link-hover-color);
+    border-color: var(--link-hover-color);
 }
