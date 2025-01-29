@@ -1,99 +1,88 @@
-/* DOS Theme Colors */
-:root {
-    --primary-color: #00FF00; /* Green text color */
-    --secondary-color: #00FF00; /* Green text color */
-    --background-color: #000000; /* Black background */
-    --text-color: #00FF00; /* Green text color */
-    --card-bg-color: #000000; /* Black card background */
-    --navbar-bg-color: #000000; /* Black navbar background */
-    --footer-bg-color: #000000; /* Black footer background */
-    --link-color: #00FF00; /* Green link color */
-    --link-hover-color: #00FF00; /* Green link hover color */
-}
-
-/* Apply DOS Theme Colors */
+/* General Styles */
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
 }
 
+/* Navbar Styles */
 .navbar {
-    background-color: var(--navbar-bg-color);
+    background-color: #343a40;
     padding: 1rem;
 }
 
 .navbar .nav-link {
-    color: var(--link-color) !important;
+    color: #ffffff !important;
     padding: 0.5rem 1rem;
-    text-decoration: none;
 }
 
 .navbar .nav-link:hover {
-    color: var(--link-hover-color) !important;
-    text-decoration: underline;
+    color: #cccccc !important;
 }
 
+/* Card Styles */
 .card {
-    background-color: var(--card-bg-color);
+    background-color: #ffffff;
     margin-bottom: 1rem;
-    border: 1px solid var(--text-color);
+    border: 1px solid #ddd;
     border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem;
 }
 
 .card-title {
-    color: var(--primary-color);
+    color: #007bff;
     font-weight: bold;
 }
 
+/* Footer Styles */
 footer {
-    background-color: var(--footer-bg-color);
-    color: var(--text-color);
+    background-color: #343a40;
+    color: #ffffff;
     padding: 1rem;
     text-align: center;
 }
 
 footer a {
-    color: var(--link-color);
+    color: #007bff;
     text-decoration: none;
 }
 
 footer a:hover {
-    color: var(--link-hover-color);
-    text-decoration: underline;
+    color: #0056b3;
 }
 
+/* Button Styles */
 .btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: var(--background-color);
-    font-family: 'Courier New', Courier, monospace;
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #ffffff;
 }
 
 .btn-primary:hover {
-    background-color: var(--link-hover-color);
-    border-color: var(--link-hover-color);
-    color: var(--background-color);
+    background-color: #0056b3;
+    border-color: #0056b3;
 }
 
+/* Container Styles */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
 }
 
+/* Intro Section Styles */
 .intro {
-    background-color: var(--card-bg-color);
+    background-color: #ffffff;
     padding: 2rem;
-    border: 1px solid var(--text-color);
+    border: 1px solid #ddd;
     border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Features Section Styles */
 .features {
     margin-top: 2rem;
 }
@@ -109,5 +98,5 @@ footer a:hover {
 
 .features .card-text {
     font-size: 1rem;
-    color: var(--secondary-color);
+    color: #6c757d;
 }
