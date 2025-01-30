@@ -2,13 +2,13 @@
 body {
   background-color: #ffffff;
   color: #333;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* Dark Mode - Softer & Comfy */
+/* Dark Mode - Softer Feel */
 .dark-mode {
-  background-color: #1c1c1e;  /* Dark but not harsh black */
-  color: #e0e0e0; /* Softer white */
+  background-color: #1c1c1e;
+  color: #e0e0e0;
 }
 
 /* Navbar */
@@ -21,59 +21,20 @@ body {
   color: #e0e0e0 !important;
 }
 
-/* Cards - Softer Contrast */
-.dark-mode .card {
-  background-color: #2a2a2d;
-  color: #e0e0e0;
-  border: 1px solid #3a3a3c;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Buttons */
-.dark-mode .btn-dark {
-  background-color: #4a4a4d;
-  color: #ffffff;
-  border: 1px solid #5a5a5d;
-}
-
-.dark-mode .btn-dark:hover {
-  background-color: #5a5a5d;
-}
-
-/* Footer */
-.dark-mode footer {
-  background-color: #242426;
-  color: #e0e0e0;
-  padding: 15px;
-  text-align: center;
-}
-
-/* Dark Mode Toggle Icon Animation */
+/* Dark Mode Toggle */
 #dark-mode-icon {
-  display: inline-block;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Softer Text Links */
-.dark-mode a {
-  color: #9fa6b2;
-}
-
-.dark-mode a:hover {
-  color: #c4cad5;
-}
-
-/* Table Styling for Dark Mode */
-.dark-mode table {
-  background-color: #2a2a2d;
-  color: #e0e0e0;
-  border: 1px solid #3a3a3c;
-}
-
-.dark-mode th, .dark-mode td {
-  border: 1px solid #3a3a3c;
-}
-
-.dark-mode th {
-  background-color: #333336;
+/* Constellation Effect (Navbar Only) */
+#nav-constellation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px; /* Match navbar height */
+  pointer-events: none; /* Prevents blocking clicks */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -1; /* Keep behind navbar elements */
 }
