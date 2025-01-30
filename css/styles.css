@@ -1,11 +1,11 @@
-/* Light Mode - Default */
+/* Default Light Mode */
 body {
   background-color: #ffffff;
   color: #333;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* Dark Mode - Softer Feel */
+/* Dark Mode */
 .dark-mode {
   background-color: #1c1c1e;
   color: #e0e0e0;
@@ -26,15 +26,15 @@ body {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Constellation Effect (Navbar Only) */
+/* Constellation Canvas */
 #nav-constellation {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 56px; /* Match navbar height */
-  pointer-events: none; /* Prevents blocking clicks */
+  height: 56px;
+  pointer-events: none;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  z-index: -1; /* Keep behind navbar elements */
+  z-index: 0;
 }
