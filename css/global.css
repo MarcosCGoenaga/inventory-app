@@ -1,96 +1,52 @@
-/* Global Styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.5s ease, color 0.5s ease;
+/* 🌙 Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
 }
 
-:root {
-  --bg-color: #ffffff;
-  --text-color: #333;
-  --navbar-bg: #f8f9fa;
-  --card-bg: #ffffff;
-  --card-border: #ddd;
-  --btn-bg: #007bff;
-  --btn-hover: #0056b3;
+.navbar.dark-mode-nav {
+  background-color: #1a1a1a !important;
 }
 
-/* Dark Mode */
-.dark-mode {
-  --bg-color: #121212;
-  --text-color: #e0e0e0;
-  --navbar-bg: #1c1c1c;
-  --card-bg: #1e1e1e;
-  --card-border: #444;
-  --btn-bg: #ff9800;
-  --btn-hover: #e68900;
+/* ✨ Stars */
+#stars-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 
-/* Navbar */
-.navbar {
-  background-color: var(--navbar-bg) !important;
-  padding: 1rem;
-}
-
-.navbar a {
-  color: var(--text-color) !important;
-}
-
-#dark-mode-toggle {
-  cursor: pointer;
-  padding: 10px;
-  background: var(--btn-bg);
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: white;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s ease;
+  opacity: 0.8;
+  animation: twinkle 1.5s infinite alternate;
 }
 
-#dark-mode-toggle:hover {
-  background: var(--btn-hover);
+@keyframes twinkle {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
 }
 
-/* Main Layout */
-.container {
-  max-width: 900px;
+/* 💫 Shooting Stars */
+.shooting-star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  left: -10%;
+  top: 0;
+  animation: shoot 5s linear infinite;
 }
 
-/* Buttons */
-.btn {
-  background-color: var(--btn-bg);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background-color: var(--btn-hover);
-}
-
-/* Cards */
-.card {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-/* Forms */
-.form-control {
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  border: 1px solid var(--card-border);
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  background-color: var(--navbar-bg);
-  color: var(--text-color);
+@keyframes shoot {
+  0% { transform: translateX(0) translateY(0); opacity: 1; }
+  100% { transform: translateX(200px) translateY(100px); opacity: 0; }
 }
