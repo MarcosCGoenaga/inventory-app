@@ -1,62 +1,68 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const darkModeToggle = document.getElementById("dark-mode-toggle");
-  const body = document.body;
-  const navbar = document.querySelector(".navbar");
-  const canvas = document.getElementById("nav-constellation");
+  const checkNavbar = setInterval(() => {
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    const body = document.body;
+    const navbar = document.querySelector(".navbar");
+    const canvas = document.getElementById("nav-constellation");
 
-  let isDarkMode = localStorage.getItem("darkMode") === "enabled";
+    if (!darkModeToggle || !navbar) return; // Wait for the navbar to load
 
-  function enableDarkMode() {
-    body.classList.add("dark-mode");
-    navbar.classList.add("dark-mode");
-    localStorage.setItem("darkMode", "enabled");
-    showConstellation();
-  }
+    clearInterval(checkNavbar); // Stop checking once navbar exists
 
-  function disableDarkMode() {
-    body.classList.remove("dark-mode");
-    navbar.classList.remove("dark-mode");
-    localStorage.setItem("darkMode", "disabled");
-    canvas.style.opacity = "0";
-  }
+    let isDarkMode = localStorage.getItem("darkMode") === "enabled";
 
-  darkModeToggle.addEventListener("click", () => {
-    isDarkMode = !isDarkMode;
-    isDarkMode ? enableDarkMode() : disableDarkMode();
-  });
+    function enableDarkMode() {
+      body.classList.add("dark-mode");
+      navbar.classList.add("dark-mode");
+      localStorage.setItem("darkMode", "enabled");
+      showConstellation();
+    }
 
-  if (isDarkMode) enableDarkMode();
+    function disableDarkMode() {
+      body.classList.remove("dark-mode");
+      navbar.classList.remove("dark-mode");
+      localStorage.setItem("darkMode", "disabled");
+      canvas.style.opacity = "0";
+    }
 
-  function showConstellation() {
-    if (!canvas) return;
-    canvas.style.opacity = "1";
+    darkModeToggle.addEventListener("click", () => {
+      isDarkMode = !isDarkMode;
+      isDarkMode ? enableDarkMode() : disableDarkMode();
+    });
 
-    setTimeout(() => {
-      if (canvas) canvas.style.opacity = "0";
-    }, 60000); // Now lasts for 60 seconds
-  }
+    if (isDarkMode) enableDarkMode();
 
-  function createShootingStar() {
-    const star = document.createElement("div");
-    star.classList.add("shooting-star");
-    document.body.appendChild(star);
+    function showConstellation() {
+      if (!canvas) return;
+      canvas.style.opacity = "1";
 
-    const startX = Math.random() * window.innerWidth;
-    const startY = Math.random() * 50;
+      setTimeout(() => {
+        if (canvas) canvas.style.opacity = "0";
+      }, 60000); // 60 seconds
+    }
 
-    star.style.left = `${startX}px`;
-    star.style.top = `${startY}px`;
+    function createShootingStar() {
+      const star = document.createElement("div");
+      star.classList.add("shooting-star");
+      document.body.appendChild(star);
 
-    setTimeout(() => {
-      star.remove();
-    }, 6000); // Shooting star lasts longer (6 seconds)
-  }
+      const startX = Math.random() * window.innerWidth;
+      const startY = Math.random() * 50;
 
-  function startShootingStars() {
-    setInterval(() => {
-      createShootingStar();
-    }, Math.random() * 5000 + 3000); // Slowed down (now 3-5 sec instead of 2-4 sec)
-  }
+      star.style.left = `${startX}px`;
+      star.style.top = `${startY}px`;
 
-  startShootingStars();
+      setTimeout(() => {
+        star.remove();
+      }, 6000); // Shooting star lasts 6 sec
+    }
+
+    function startShootingStars() {
+      setInterval(() => {
+        createShootingStar();
+      }, Math.random() * 5000 + 3000); // Slowed down (3-5 sec)
+    }
+
+    startShootingStars();
+  }, 100); // Check every 100ms until navbar loads
 });
