@@ -3,29 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add/Edit Product - Inventory Tracker</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <title>Inventory Tracker - Add/Edit Products</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div id="navbar-placeholder"></div>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="ppl.html">PPL</a>
+    <a href="product-form.html">Add/Edit Products</a>
+    <a href="reports.html">Reports</a>
+    <a href="about.html">About</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
+    <button id="dark-mode-toggle">🌙</button>
+  </nav>
 
-  <main class="container my-5">
-    <h2 class="text-center">Add / Edit Product</h2>
-    <form>
-      <div class="form-group">
-        <label for="productName">Product Name</label>
-        <input type="text" class="form-control" id="productName" placeholder="Enter product name">
-      </div>
-      <div class="form-group">
-        <label for="productQuantity">Quantity</label>
-        <input type="number" class="form-control" id="productQuantity" placeholder="Enter quantity">
-      </div>
-      <button type="submit" class="btn btn-primary">Save Product</button>
-    </form>
+  <canvas id="nav-constellation"></canvas>
+
+  <main>
+    <h2>Add/Edit Products</h2>
+    <p>Fill out the form below to add or update products.</p>
   </main>
 
-  <div id="footer-placeholder"></div>
+  <footer>
+    <p>&copy; 2025 Inventory Tracker</p>
+  </footer>
 
   <script src="js/layout.js"></script>
 </body>
