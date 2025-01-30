@@ -2,50 +2,50 @@
 
 /* Navbar styles */
 .navbar {
-    background-color: #ADB5BD; /* Light gray background */
+    background-color: #6610F2; /* Vivid purple background */
     border-bottom: 1px solid #dee2e6; /* Subtle border */
 }
 
 .navbar .navbar-brand,
 .navbar .nav-link {
-    color: #6C757D; /* Medium gray text color */
+    color: #0D6EFD; /* Vivid blue text color */
 }
 
 .navbar .navbar-brand:hover,
 .navbar .nav-link:hover {
-    color: #495057; /* Slightly darker gray on hover */
+    color: #0A58CA; /* Slightly darker blue on hover */
 }
 
 /* Footer styles */
 footer {
-    background-color: #ADB5BD; /* Light gray background */
-    color: #6C757D; /* Medium gray text color */
+    background-color: #6610F2; /* Vivid purple background */
+    color: #0D6EFD; /* Vivid blue text color */
     border-top: 1px solid #dee2e6; /* Subtle border */
 }
 
 /* Example of other neutral tones you might use */
 body {
-    background-color: #F8F9FA; /* Off white background for the body */
-    color: #6C757D; /* Medium gray text color for the body */
+    background-color: #E9ECEF; /* Light gray background for the body */
+    color: #0D6EFD; /* Vivid blue text color for the body */
 }
 
 /* Button styles */
 .btn-primary {
-    background-color: #6C757D; /* Medium gray background */
-    border-color: #6C757D; /* Medium gray border */
+    background-color: #0D6EFD; /* Vivid blue background */
+    border-color: #0D6EFD; /* Vivid blue border */
 }
 
 .btn-primary:hover {
-    background-color: #5A6268; /* Slightly darker gray on hover */
-    border-color: #545B62; /* Slightly darker gray border on hover */
+    background-color: #0A58CA; /* Slightly darker blue on hover */
+    border-color: #094BBF; /* Slightly darker blue border on hover */
 }
 
 .btn-success {
-    background-color: #495057; /* Dark gray background */
-    border-color: #495057; /* Dark gray border */
+    background-color: #198754; /* Green background */
+    border-color: #198754; /* Green border */
 }
 
 .btn-success:hover {
-    background-color: #343A40; /* Darker gray on hover */
-    border-color: #30363D; /* Darker gray border on hover */
+    background-color: #157347; /* Darker green on hover */
+    border-color: #146C43; /* Darker green border on hover */
 }
