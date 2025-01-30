@@ -2,98 +2,50 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Navbar */
-.navbar {
-  background-color: #007bff !important;
+/* Dark Mode */
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #ddd;
 }
 
-.navbar-brand, .navbar-nav .nav-link {
+.dark-mode .navbar {
+  background-color: #333 !important;
+}
+
+.dark-mode .navbar a {
   color: white !important;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #ffdd57 !important;
+.dark-mode .card {
+  background: #333;
+  color: #ddd;
+  border: 1px solid #555;
 }
 
-/* Main Content */
-.container {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+.dark-mode .btn-outline-dark {
+  background-color: #ddd;
+  color: #222;
+  border-color: #ddd;
 }
 
-/* Buttons */
-.btn-success {
-  background-color: #28a745;
-  border: none;
+.dark-mode .btn-outline-dark:hover {
+  background-color: #bbb;
 }
 
-.btn-success:hover {
-  background-color: #218838;
+/* Footer Dark Mode */
+.dark-mode footer {
+  background-color: #222;
+  color: #ddd;
 }
 
-.btn-primary {
-  background-color: #007bff;
-  border: none;
+.dark-mode footer a {
+  color: #bbb;
 }
 
-.btn-primary:hover {
-  background-color: #0056b3;
-}
-
-/* Feature Cards */
-.card {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
-}
-
-.card:hover {
-  transform: scale(1.02);
-}
-
-.card-title {
-  color: #333;
-  font-weight: bold;
-}
-
-.card-text {
-  color: #666;
-}
-
-/* Footer */
-footer {
-  background-color: #f8f9fa;
-  padding: 15px;
-  text-align: center;
-  font-size: 14px;
-}
-
-footer a {
-  color: #007bff;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .container {
-    padding: 15px;
-  }
-
-  .navbar-toggler {
-    border: none;
-  }
+.dark-mode footer a:hover {
+  color: white;
 }
