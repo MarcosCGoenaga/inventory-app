@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Load Navbar
-  fetch("navbar.html")
+  fetch("./navbar.html") // Adjust path for GitHub Pages
     .then(response => response.text())
     .then(data => {
       document.getElementById("navbar-placeholder").innerHTML = data;
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch(error => console.error("Error loading navbar:", error));
 
   // Load Footer
-  fetch("footer.html")
+  fetch("./footer.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("footer-placeholder").innerHTML = data;
@@ -22,14 +22,12 @@ function setupDarkMode() {
   const body = document.body;
   const navbar = document.querySelector(".navbar");
 
-  // Check local storage for dark mode setting
   if (localStorage.getItem("darkMode") === "enabled") {
     body.classList.add("dark-mode");
     navbar.classList.add("dark-mode-nav");
     addConstellationEffect();
   }
 
-  // Add event listener for toggle
   toggle.addEventListener("click", function () {
     body.classList.toggle("dark-mode");
     navbar.classList.toggle("dark-mode-nav");
@@ -44,7 +42,6 @@ function setupDarkMode() {
   });
 }
 
-// 🌌 Add Constellation Effect (Dark Mode)
 function addConstellationEffect() {
   let starsContainer = document.getElementById("stars-container");
   if (!starsContainer) {
@@ -65,10 +62,8 @@ function addConstellationEffect() {
   addShootingStars();
 }
 
-// 💫 Add Shooting Stars
 function addShootingStars() {
   let starsContainer = document.getElementById("stars-container");
-
   for (let i = 0; i < 3; i++) {
     let shootingStar = document.createElement("div");
     shootingStar.className = "shooting-star";
@@ -81,7 +76,6 @@ function addShootingStars() {
   }
 }
 
-// 🚀 Remove Constellation Effect (Light Mode)
 function removeConstellationEffect() {
   let starsContainer = document.getElementById("stars-container");
   if (starsContainer) {

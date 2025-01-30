@@ -7,24 +7,20 @@
   <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
-
   <div id="navbar-placeholder"></div>
 
   <main class="container my-5">
-    <h2 class="text-center">Add or Edit Products</h2>
+    <h2>Add or Edit Product</h2>
     <form>
-      <label>Product Name:</label>
-      <input type="text" class="form-control">
-      <label>Price:</label>
-      <input type="number" class="form-control">
-      <button class="btn btn-primary mt-3">Save</button>
+      <div class="form-group">
+        <label for="productName">Product Name</label>
+        <input type="text" id="productName" class="form-control" placeholder="Enter product name">
+      </div>
+      <button type="submit" class="btn btn-primary">Save Product</button>
     </form>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Inventory Tracker. All rights reserved.</p>
-  </footer>
-
+  <div id="footer-placeholder"></div>
   <script src="js/layout.js"></script>
 </body>
 </html>
