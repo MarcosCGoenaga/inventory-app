@@ -11,8 +11,18 @@
   <div id="navbar-placeholder"></div>
 
   <main class="container my-5">
-    <h2 class="text-center">Add or Edit a Product</h2>
-    <p class="text-center">This page will contain a form for managing products.</p>
+    <h2 class="text-center">Add / Edit Product</h2>
+    <form>
+      <div class="form-group">
+        <label for="productName">Product Name</label>
+        <input type="text" class="form-control" id="productName" placeholder="Enter product name">
+      </div>
+      <div class="form-group">
+        <label for="productQuantity">Quantity</label>
+        <input type="number" class="form-control" id="productQuantity" placeholder="Enter quantity">
+      </div>
+      <button type="submit" class="btn btn-primary">Save Product</button>
+    </form>
   </main>
 
   <div id="footer-placeholder"></div>
