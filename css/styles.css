@@ -11,6 +11,7 @@ body {
   color: #ffffff;
 }
 
+/* Navbar */
 .dark-mode .navbar {
   background-color: #1e1e1e !important;
   border-bottom: 1px solid #444;
@@ -20,17 +21,20 @@ body {
   color: #ffffff !important;
 }
 
+/* Cards */
 .dark-mode .card {
   background-color: #1e1e1e;
   color: #ffffff;
   border: 1px solid #444;
 }
 
+/* Footer */
 .dark-mode footer {
   background-color: #1e1e1e;
   color: #ffffff;
 }
 
+/* Dark Mode Button */
 .dark-mode .btn-dark {
   background-color: #ffffff;
   color: #000000;
@@ -39,4 +43,10 @@ body {
 .dark-mode .btn-light {
   background-color: #333;
   color: #ffffff;
+}
+
+/* Animation for Dark Mode Toggle Icon */
+#dark-mode-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
