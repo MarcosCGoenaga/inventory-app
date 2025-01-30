@@ -18,3 +18,8 @@ document.getElementById("navbar-placeholder").innerHTML = `
     </div>
   </nav>
 `;
+
+// Load Dark Mode Script
+const darkModeScript = document.createElement("script");
+darkModeScript.src = "js/dark-mode.js";
+document.body.appendChild(darkModeScript);
