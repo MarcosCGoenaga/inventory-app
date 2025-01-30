@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const ctx = canvas.getContext("2d");
 
   let stars = [];
+  let shootingStars = [];
   let animationFrame;
 
   function resizeCanvas() {
@@ -78,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!canvas || !ctx) return;
     resizeCanvas();
     stars = [];
+    shootingStars = [];
 
     for (let i = 0; i < 50; i++) {
       stars.push({
@@ -97,10 +99,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 5000);
   }
 
+  function createShootingStar() {
+    shootingStars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height / 2, // Only in upper half
+      length: Math.random() * 50 + 20,
+      speed: Math.random() * 5 + 2,
+      opacity: 1
+    });
+
+    setTimeout(createShootingStar, Math.random() * 4000 + 2000); // Every 2-6 seconds
+  }
+
   function animateStars() {
     if (!ctx) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    // Draw normal stars
     stars.forEach((star) => {
       star.alpha += star.speed * 0.01;
       if (star.alpha >= 1 || star.alpha <= 0) {
@@ -113,8 +128,29 @@ document.addEventListener("DOMContentLoaded", function () {
       ctx.fill();
     });
 
+    // Draw shooting stars
+    for (let i = 0; i < shootingStars.length; i++) {
+      let star = shootingStars[i];
+      ctx.beginPath();
+      ctx.moveTo(star.x, star.y);
+      ctx.lineTo(star.x - star.length, star.y + star.length);
+      ctx.strokeStyle = `rgba(255, 255, 255, ${star.opacity})`;
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      star.x += star.speed;
+      star.y += star.speed;
+      star.opacity -= 0.02;
+
+      if (star.opacity <= 0) {
+        shootingStars.splice(i, 1);
+        i--;
+      }
+    }
+
     animationFrame = requestAnimationFrame(animateStars);
   }
 
+  createShootingStar(); // Start shooting star effect
   window.addEventListener("resize", resizeCanvas);
 });

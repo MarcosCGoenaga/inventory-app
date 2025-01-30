@@ -1,17 +1,31 @@
-/* Default Light Mode */
+/* ====== Global Styles ====== */
 body {
-  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
   color: #333;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s, color 0.5s;
 }
 
-/* Dark Mode */
+/* ====== Dark Mode Styles ====== */
 .dark-mode {
   background-color: #1c1c1e;
   color: #e0e0e0;
 }
 
 /* Navbar */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 2px solid #ddd;
+  transition: background-color 0.5s, border-bottom 0.5s;
+}
+
+.navbar a {
+  color: #333 !important;
+  transition: color 0.5s;
+}
+
 .dark-mode .navbar {
   background-color: #242426 !important;
   border-bottom: 1px solid #3a3a3c;
@@ -21,12 +35,7 @@ body {
   color: #e0e0e0 !important;
 }
 
-/* Dark Mode Toggle */
-#dark-mode-icon {
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-/* Constellation Canvas */
+/* ====== Constellation Effect ====== */
 #nav-constellation {
   position: absolute;
   top: 0;
@@ -37,4 +46,68 @@ body {
   opacity: 0;
   transition: opacity 1s ease-in-out;
   z-index: 0;
+}
+
+/* ====== Dark Mode Toggle Button ====== */
+#dark-mode-toggle {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+#dark-mode-toggle:hover {
+  transform: scale(1.2);
+}
+
+.dark-mode #dark-mode-icon {
+  transform: rotate(180deg);
+  color: #ffcc00;
+}
+
+/* ====== Main Content ====== */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Cards */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.dark-mode .card {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+/* Buttons */
+.btn {
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-top: 2px solid #ddd;
+  margin-top: 40px;
+  transition: background-color 0.5s;
+}
+
+.dark-mode footer {
+  background-color: #242426;
+  border-top: 1px solid #3a3a3c;
+  color: #e0e0e0;
 }
