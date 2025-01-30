@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     stars = [];
     shootingStars = [];
 
+    // Generate static stars
     for (let i = 0; i < 50; i++) {
       stars.push({
         x: Math.random() * canvas.width,
@@ -102,20 +103,21 @@ document.addEventListener("DOMContentLoaded", function () {
   function createShootingStar() {
     shootingStars.push({
       x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height / 2, // Only in upper half
-      length: Math.random() * 50 + 20,
-      speed: Math.random() * 5 + 2,
+      y: Math.random() * canvas.height / 2, // Upper half of navbar
+      length: Math.random() * 80 + 30, // Longer streak
+      speed: Math.random() * 5 + 2, // Faster movement
       opacity: 1
     });
 
-    setTimeout(createShootingStar, Math.random() * 4000 + 2000); // Every 2-6 seconds
+    // Add a new shooting star every 2-4 seconds
+    setTimeout(createShootingStar, Math.random() * 3000 + 2000);
   }
 
   function animateStars() {
     if (!ctx) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Draw normal stars
+    // Draw static stars
     stars.forEach((star) => {
       star.alpha += star.speed * 0.01;
       if (star.alpha >= 1 || star.alpha <= 0) {
@@ -151,6 +153,6 @@ document.addEventListener("DOMContentLoaded", function () {
     animationFrame = requestAnimationFrame(animateStars);
   }
 
-  createShootingStar(); // Start shooting star effect
+  createShootingStar(); // Start shooting stars
   window.addEventListener("resize", resizeCanvas);
 });

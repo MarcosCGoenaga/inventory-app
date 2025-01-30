@@ -66,6 +66,27 @@ body {
   color: #ffcc00;
 }
 
+/* ====== Shooting Stars on Navbar ====== */
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  opacity: 0;
+  animation: shootingStar 2s linear infinite;
+}
+
+@keyframes shootingStar {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100px, 50px);
+    opacity: 0;
+  }
+}
+
 /* ====== Main Content ====== */
 .container {
   max-width: 900px;
