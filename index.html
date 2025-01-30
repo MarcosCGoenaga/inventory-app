@@ -32,6 +32,24 @@
         .dark-mode .navbar, .dark-mode .footer {
             background-color: #222;
         }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .grid-item {
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .grid-item:hover {
+            background-color: #f0f0f0;
+        }
+        .dark-mode .grid-item:hover {
+            background-color: #333;
+        }
     </style>
 </head>
 <body>
@@ -57,7 +75,26 @@
     <div class="container">
         <h2>Welcome to Inventory Tracker</h2>
         <p>Manage your inventory efficiently with our user-friendly interface.</p>
-        <p>Use the navigation bar to access different sections of the application.</p>
+        <div class="grid-container">
+            <div class="grid-item">
+                <a href="index.html">Home</a>
+            </div>
+            <div class="grid-item">
+                <a href="ppl.html">Product List</a>
+            </div>
+            <div class="grid-item">
+                <a href="product-form.html">Add/Edit Product</a>
+            </div>
+            <div class="grid-item">
+                <a href="reports.html">Reports</a>
+            </div>
+            <div class="grid-item">
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+            <div class="grid-item">
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
     </div>
 
     <div class="footer">
