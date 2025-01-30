@@ -3,30 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inventory Tracker - Add/Edit Products</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Add/Edit Product</title>
+  <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
-  <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="ppl.html">PPL</a>
-    <a href="product-form.html">Add/Edit Products</a>
-    <a href="reports.html">Reports</a>
-    <a href="about.html">About</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="contact.html">Contact</a>
-    <button id="dark-mode-toggle">🌙</button>
-  </nav>
 
-  <canvas id="nav-constellation"></canvas>
+  <div id="navbar-placeholder"></div>
 
-  <main>
-    <h2>Add/Edit Products</h2>
-    <p>Fill out the form below to add or update products.</p>
+  <main class="container my-5">
+    <h2 class="text-center">Add or Edit Products</h2>
+    <form>
+      <label>Product Name:</label>
+      <input type="text" class="form-control">
+      <label>Price:</label>
+      <input type="number" class="form-control">
+      <button class="btn btn-primary mt-3">Save</button>
+    </form>
   </main>
 
   <footer>
-    <p>&copy; 2025 Inventory Tracker</p>
+    <p>&copy; 2025 Inventory Tracker. All rights reserved.</p>
   </footer>
 
   <script src="js/layout.js"></script>

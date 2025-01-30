@@ -4,36 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inventory Tracker - Home</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.html">Inventory Tracker</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="ppl.html">PPL</a></li>
-        <li class="nav-item"><a class="nav-link" href="product-form.html">Add/Edit Products</a></li>
-        <li class="nav-item"><a class="nav-link" href="reports.html">Generate Reports</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy Policy</a></li>
-      </ul>
-      <!-- Dark Mode Toggle -->
-      <div id="dark-mode-toggle"></div>
-    </div>
-  </nav>
+
+  <div id="navbar-placeholder"></div>
 
   <main class="container my-5">
-    <h2 class="text-center">Manage Your Inventory Efficiently</h2>
-    <p class="text-center">Track your products, manage stock levels, and generate reports.</p>
-    <button class="btn btn-success" onclick="location.href='ppl.html'">Get Started</button>
+    <section class="intro text-center">
+      <h2>Manage Your Inventory Efficiently</h2>
+      <p>Track your products, manage stock levels, and generate reports with ease.</p>
+      <button class="btn btn-success" onclick="location.href='ppl.html'">Get Started</button>
+    </section>
   </main>
 
+  <footer>
+    <p>&copy; 2025 Inventory Tracker. All rights reserved.</p>
+  </footer>
+
   <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
