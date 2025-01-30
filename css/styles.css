@@ -14,11 +14,13 @@ body {
   color: #e0e0e0;
 }
 
-/* Navbar */
+/* ====== Navbar ====== */
 .navbar {
   background-color: #ffffff;
   border-bottom: 2px solid #ddd;
   transition: background-color 0.5s, border-bottom 0.5s;
+  position: relative;
+  z-index: 1000;
 }
 
 .navbar a {
@@ -35,7 +37,7 @@ body {
   color: #e0e0e0 !important;
 }
 
-/* ====== Constellation Effect ====== */
+/* ====== Constellation Effect on Navbar ====== */
 #nav-constellation {
   position: absolute;
   top: 0;
@@ -45,7 +47,7 @@ body {
   pointer-events: none;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  z-index: 0;
+  z-index: -1;
 }
 
 /* ====== Dark Mode Toggle Button ====== */
@@ -66,14 +68,14 @@ body {
   color: #ffcc00;
 }
 
-/* ====== Shooting Stars on Navbar ====== */
+/* ====== Shooting Stars ====== */
 .shooting-star {
   position: absolute;
   width: 2px;
   height: 2px;
   background-color: white;
   opacity: 0;
-  animation: shootingStar 5s linear infinite;
+  animation: shootingStar 6s linear infinite;
 }
 
 @keyframes shootingStar {
@@ -87,37 +89,7 @@ body {
   }
 }
 
-/* ====== Main Content ====== */
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* Cards */
-.card {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  transition: background-color 0.5s, color 0.5s;
-}
-
-.dark-mode .card {
-  background-color: #333;
-  color: #e0e0e0;
-}
-
-/* Buttons */
-.btn {
-  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-}
-
-/* Footer */
+/* ====== Footer ====== */
 footer {
   text-align: center;
   padding: 20px;
