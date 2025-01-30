@@ -3,31 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inventory Tracker - Product List</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>PPL - Inventory List</title>
+  <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
-  <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="ppl.html">PPL</a>
-    <a href="product-form.html">Add/Edit Products</a>
-    <a href="reports.html">Reports</a>
-    <a href="about.html">About</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="contact.html">Contact</a>
-    <button id="dark-mode-toggle">🌙</button>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Inventory Tracker</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="ppl.html">PPL</a></li>
+        <li class="nav-item"><a class="nav-link" href="product-form.html">Add/Edit Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="reports.html">Generate Reports</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy Policy</a></li>
+      </ul>
+      <div id="dark-mode-toggle"></div>
+    </div>
   </nav>
-  
-  <canvas id="nav-constellation"></canvas>
 
-  <main>
-    <h2>Product List</h2>
-    <p>View and manage your inventory items.</p>
+  <main class="container my-5">
+    <h2>PPL - Inventory List</h2>
+    <p>Here you can view and manage your inventory.</p>
   </main>
-
-  <footer>
-    <p>&copy; 2025 Inventory Tracker</p>
-  </footer>
 
   <script src="js/layout.js"></script>
 </body>
