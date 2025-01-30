@@ -49,13 +49,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
       star.remove();
-    }, 6000); // Extended duration for a longer effect
+    }, 6000); // Shooting star lasts longer (6 seconds)
   }
 
   function startShootingStars() {
     setInterval(() => {
       createShootingStar();
-    }, Math.random() * 5000 + 3000); // Slowed down (previously 2-4 sec, now 3-5 sec)
+    }, Math.random() * 5000 + 3000); // Slowed down (now 3-5 sec instead of 2-4 sec)
   }
 
   startShootingStars();
