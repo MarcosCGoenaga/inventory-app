@@ -14,12 +14,46 @@ document.getElementById("navbar-placeholder").innerHTML = `
         <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy Policy</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
-      <button id="dark-mode-toggle" class="btn btn-outline-dark ml-auto">🌙 Dark Mode</button>
+      <button id="dark-mode-toggle" class="btn btn-sm btn-dark ml-auto">🌙 Dark Mode</button>
     </div>
   </nav>
 `;
 
-// Load Dark Mode Script
-const darkModeScript = document.createElement("script");
-darkModeScript.src = "js/dark-mode.js";
-document.body.appendChild(darkModeScript);
+document.getElementById("footer-placeholder").innerHTML = `
+  <footer class="text-center py-3">
+    <p>&copy; 2025 Inventory Tracker. All rights reserved.</p>
+  </footer>
+`;
+
+// Dark Mode Toggle Functionality
+const darkModeToggle = document.getElementById("dark-mode-toggle");
+const body = document.body;
+
+// Check if Dark Mode is stored in localStorage
+if (localStorage.getItem("darkMode") === "enabled") {
+  enableDarkMode();
+}
+
+darkModeToggle.addEventListener("click", () => {
+  if (body.classList.contains("dark-mode")) {
+    disableDarkMode();
+  } else {
+    enableDarkMode();
+  }
+});
+
+function enableDarkMode() {
+  body.classList.add("dark-mode");
+  localStorage.setItem("darkMode", "enabled");
+  darkModeToggle.textContent = "☀️ Light Mode";
+  darkModeToggle.classList.remove("btn-dark");
+  darkModeToggle.classList.add("btn-light");
+}
+
+function disableDarkMode() {
+  body.classList.remove("dark-mode");
+  localStorage.setItem("darkMode", "disabled");
+  darkModeToggle.textContent = "🌙 Dark Mode";
+  darkModeToggle.classList.remove("btn-light");
+  darkModeToggle.classList.add("btn-dark");
+}

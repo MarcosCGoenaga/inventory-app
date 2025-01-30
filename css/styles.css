@@ -1,51 +1,42 @@
-/* General Styles */
+/* Default Light Mode */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #ffffff;
+  color: #000000;
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Dark Mode */
+/* Dark Mode Styles */
 .dark-mode {
-  background-color: #1e1e1e;
-  color: #ddd;
+  background-color: #121212;
+  color: #ffffff;
 }
 
 .dark-mode .navbar {
-  background-color: #333 !important;
+  background-color: #1e1e1e !important;
+  border-bottom: 1px solid #444;
 }
 
 .dark-mode .navbar a {
-  color: white !important;
+  color: #ffffff !important;
 }
 
 .dark-mode .card {
-  background: #333;
-  color: #ddd;
-  border: 1px solid #555;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #444;
 }
 
-.dark-mode .btn-outline-dark {
-  background-color: #ddd;
-  color: #222;
-  border-color: #ddd;
-}
-
-.dark-mode .btn-outline-dark:hover {
-  background-color: #bbb;
-}
-
-/* Footer Dark Mode */
 .dark-mode footer {
-  background-color: #222;
-  color: #ddd;
+  background-color: #1e1e1e;
+  color: #ffffff;
 }
 
-.dark-mode footer a {
-  color: #bbb;
+.dark-mode .btn-dark {
+  background-color: #ffffff;
+  color: #000000;
 }
 
-.dark-mode footer a:hover {
-  color: white;
+.dark-mode .btn-light {
+  background-color: #333;
+  color: #ffffff;
 }
