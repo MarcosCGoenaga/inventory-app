@@ -26,48 +26,14 @@
     </style>
 </head>
 <body>
-    <h2>Paste Raw Data Below</h2>
-    <textarea id="rawData" placeholder="Paste your DOS screen data here..."></textarea>
-    <button onclick="parseData()">Parse Data</button>
-    
-    <h2>Parsed Data</h2>
-    <table id="dataTable">
-        <thead>
-            <tr>
-                <th>Item</th>
-                <th>Quantity</th>
-                <th>Location</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-
-    <script>
-        function parseData() {
-            const rawText = document.getElementById('rawData').value;
-            const lines = rawText.split('\n');
-            const tableBody = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
-            tableBody.innerHTML = "";
-            const parsedData = [];
-            
-            lines.forEach(line => {
-                const parts = line.trim().split(/\s+/);
-                if (parts.length >= 3) {
-                    const row = tableBody.insertRow();
-                    row.insertCell(0).textContent = parts[0];
-                    row.insertCell(1).textContent = parts[1];
-                    row.insertCell(2).textContent = parts.slice(2).join(' ');
-                    parsedData.push({
-                        item: parts[0],
-                        quantity: parts[1],
-                        location: parts.slice(2).join(' ')
-                    });
-                }
-            });
-            localStorage.setItem('inventoryData', JSON.stringify(parsedData));
-        }
-    </script>
+    <nav>
+        <a href="https://github.com/MarcosCGoenaga/inventory-app" target="_blank">My Project</a>
+    </nav>
+    <!-- Replacing previous parser UI with a project pointer -->
+    <h1>Project Inventory App</h1>
+    <p>
+      Visit our <a href="https://github.com/MarcosCGoenaga/inventory-app" target="_blank">GitHub Repository</a> for details.
+    </p>
 </body>
 </html>
 
