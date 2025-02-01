@@ -49,16 +49,23 @@
             const lines = rawText.split('\n');
             const tableBody = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
             tableBody.innerHTML = "";
+            const parsedData = [];
             
             lines.forEach(line => {
-                const parts = line.trim().split(/\s+/); // Split by spaces
+                const parts = line.trim().split(/\s+/);
                 if (parts.length >= 3) {
                     const row = tableBody.insertRow();
                     row.insertCell(0).textContent = parts[0];
                     row.insertCell(1).textContent = parts[1];
                     row.insertCell(2).textContent = parts.slice(2).join(' ');
+                    parsedData.push({
+                        item: parts[0],
+                        quantity: parts[1],
+                        location: parts.slice(2).join(' ')
+                    });
                 }
             });
+            localStorage.setItem('inventoryData', JSON.stringify(parsedData));
         }
     </script>
 </body>

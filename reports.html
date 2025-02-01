@@ -28,6 +28,35 @@
     
     <h2>Reports Page</h2>
     <p>This section will display various reports generated from the inventory data.</p>
+    
+    <!-- New report container will be added via script -->
+    <script>
+        window.onload = function() {
+            const data = JSON.parse(localStorage.getItem('inventoryData') || '[]');
+            const reportContainer = document.createElement('div');
+            if (data.length === 0) {
+                reportContainer.textContent = 'No inventory data available. Please parse data on the Data Entry page.';
+            } else {
+                const table = document.createElement('table');
+                table.style.width = '100%';
+                table.style.borderCollapse = 'collapse';
+                const thead = document.createElement('thead');
+                thead.innerHTML = '<tr><th style="border:1px solid black;padding:8px;">Item</th><th style="border:1px solid black;padding:8px;">Quantity</th><th style="border:1px solid black;padding:8px;">Location</th></tr>';
+                table.appendChild(thead);
+                const tbody = document.createElement('tbody');
+                data.forEach(entry => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td style="border:1px solid black;padding:8px;">${entry.item}</td>
+                                    <td style="border:1px solid black;padding:8px;">${entry.quantity}</td>
+                                    <td style="border:1px solid black;padding:8px;">${entry.location}</td>`;
+                    tbody.appendChild(tr);
+                });
+                table.appendChild(tbody);
+                reportContainer.appendChild(table);
+            }
+            document.body.appendChild(reportContainer);
+        }
+    </script>
 </body>
 </html>
 
